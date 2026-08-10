@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function info(){
+            let age = parseInt(prompt("enter your age",));
+            if(age >= 18){
+                let c = confirm("want to vote");
+            } else{
+                alert("you are not eligible");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Age</h1>
+    <input type="button" onlclick="info()" value="age">
+</body>
+</html>
