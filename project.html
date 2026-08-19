@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+</head>
+<style>
+    div{
+        height:400px;
+        width:300px;
+        border:1px,solid;
+        border-radius: 30px;
+    }
+    h3{
+        text-align: center;
+    }
+    button{
+    
+        color: red;
+    }
+</style>
+<body>
+    <form>
+    <div class="A">
+        <div class="B">
+            <u><h3>Registration</h3></u>
+            Name:<br><input type="text" placeholder="Enter name" required id="name"><br><br>
+            Email:<br><input type="email" placeholder="Enter email" required id="email"><br><br>
+            Password:<br><input type="password" placeholder="Enter password" required id="pass"><br><br>
+            Confirm Password:<br><input type="password" placeholder="Re-Enter Password" required id="re-pass"><br><br>
+            Mobile:<br><input type="text" placeholder="Enter Mobile number" required id="mobile"><br><br>
+            <button type="submit" onsubmit="regis()">Submit</button>
+        </div>
+    </div>
+</form>
+<script>
+function regis(){
+        let name = document.getElementById("name").value;
+        let mobile = document.getElementById("mobile").value;
+        let pass = document.getElementById("pass").value;
+        let repass = document.getElementById("re-pass").value;
+        
+         if (name.trim() === "" || !/^[a-zA-Z ]+$/.test(name)) {
+                alert("Name should contain only characters");
+                return false;
+            }
+
+            // Mobile validation
+            if (!/^\d{10}$/.test(mobile)) {
+                alert("Mobile number should contain exactly 10 digits");
+                return false;
+            }
+
+            // Password validation
+            if (pass.length !== 8) {
+                alert("Password length should be exactly 8 characters");
+                return false;
+            }
+
+            // Confirm password
+            if (pass !== rePass) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return true;
+}
+</script>
+</body>
+</html>
