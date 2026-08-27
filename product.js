@@ -16,15 +16,26 @@ let product = {
         console.log("product price:" + this.p_price);
         console.log("Product quantity:") + this.p_quantity;
         console.log("cost:" + product.cost());
-
-    
     }
 };
+
 //calling cost function
 product.cost();
+
 //calling update quantity
 product.update_quantity(5);
+
 //calling cost function after updating quantity
-product.cost()
+product.cost();
+
 //display funtion
 product.display();
+
+//printing keys
+console.log(Object.keys(product));
+
+//printing values
+console.log(Object.values(product));
+
+//printing both
+console.log(Object.entries(product));
