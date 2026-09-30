@@ -1,3 +1,5 @@
+//Example:-1
+
 /*function App() {
   const studentName = "Rahul Sharma";
   const courseName = "OOPS with C++";
@@ -15,6 +17,8 @@
 }
 
 export default App;*/
+
+//Example:-2
 
 /*function Header() {
   return <h1>Student Management System</h1>;
@@ -42,7 +46,9 @@ function App() {
 
 export default App;*/
 
-function Header() {
+//Example:-3
+
+/*function Header() {
   return <h1>Student Management System</h1>;
 }
 
@@ -73,6 +79,31 @@ function App() {
         course="B.Tech AIML"
         rollNo={125}
       />
+    </div>
+  );
+}
+
+export default App;*/
+
+//Example:-4
+
+function App() {
+  function showMessage() {
+    alert("Welcome to React Event Handling");
+  }
+  function AlsoShowMessage() {
+    alert("This My First React Program");
+  }
+
+  return (
+    <div>
+      <h1>React Event Example</h1>
+
+      <button onClick={showMessage}>
+        Click Me
+      </button>
+      <br />
+      <button onClick={AlsoShowMessage}>Click Me</button>
     </div>
   );
 }
