@@ -1,15 +1,23 @@
-function App() {
-  const studentName = "Nitin Kumar";
-  const courseName = "Web Development";
-  const rollNo = 129;
+function Header() {
+  return <h1>Student Management System</h1>;
+}
 
+function Student() {
   return (
     <div>
-      <h1>Student Details</h1>
+      <h2>Student Details</h2>
+      <p>Name:Nitin Kumar</p>
+      <p>Course: B.Tech CSE</p>
+      <p>Roll No:129</p>
+    </div>
+  );
+}
 
-      <p>Name: {studentName}</p>
-      <p>Course: {courseName}</p>
-      <p>Roll No: {rollNo}</p>
+function App() {
+  return (
+    <div>
+      <Header />
+      <Student />
     </div>
   );
 }
