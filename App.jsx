@@ -87,7 +87,7 @@ export default App;*/
 
 //Example:-4
 
-function App() {
+/*function App() {
   function showMessage() {
     alert("Welcome to React Event Handling");
   }
@@ -104,6 +104,32 @@ function App() {
       </button>
       <br />
       <button onClick={AlsoShowMessage}>Click Me</button>
+    </div>
+  );
+}
+
+export default App;*/
+
+//Example:-5
+
+import { useState } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  function increaseCount() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <h1>React Counter</h1>
+
+      <h2>Count: {count}</h2>
+
+      <button onClick={increaseCount}>
+        Increase
+      </button>
     </div>
   );
 }
