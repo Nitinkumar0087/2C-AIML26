@@ -1,3 +1,21 @@
+/*function App() {
+  const studentName = "Rahul Sharma";
+  const courseName = "OOPS with C++";
+  const attendance = 82;
+
+  return (
+    <div>
+      <h1>Student Details</h1>
+
+      <p>Name: {studentName}</p>
+      <p>Course: {courseName}</p>
+      <p>Attendance: {attendance}%</p>
+    </div>
+  );
+}
+
+export default App;*/
+
 function Header() {
   return <h1>Student Management System</h1>;
 }
