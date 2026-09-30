@@ -16,7 +16,7 @@
 
 export default App;*/
 
-function Header() {
+/*function Header() {
   return <h1>Student Management System</h1>;
 }
 
@@ -36,6 +36,43 @@ function App() {
     <div>
       <Header />
       <Student />
+    </div>
+  );
+}
+
+export default App;*/
+
+function Header() {
+  return <h1>Student Management System</h1>;
+}
+
+function Student(props) {
+  return (
+    <div>
+      <h2>Student Details</h2>
+      <p>Name: {props.name}</p>
+      <p>Course: {props.course}</p>
+      <p>Roll No: {props.rollNo}</p>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <Header />
+
+      <Student
+        name="Nitin Kumar"
+        course="B.Tech CSE-AIML"
+        rollNo={129}
+      />
+
+      <Student
+        name="Nikit"
+        course="B.Tech AIML"
+        rollNo={125}
+      />
     </div>
   );
 }
