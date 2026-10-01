@@ -138,7 +138,7 @@ export default App;*/
 
 //Example:-6
 
-import { useState } from 'react';
+/*import { useState } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -178,4 +178,39 @@ function App() {
   );
 }
 
+export default App;*/
+
+//Example:-8
+//Creating button
+
+import {useState} from 'react';
+
+function App(){
+  const [count,setCount] = useState(0);
+
+  function increaseCount(){
+    setCount(count + 1);
+  }
+
+  function decreaseCount(){
+    setCount(count - 1);
+  }
+
+  function reset(){
+    setCount(0);
+  }
+
+  return (
+    <div>
+    <h1>React Counter</h1>
+    <h2>{count}</h2>
+
+    <button onClick={increaseCount}> Click Me To Increase Count</button> <br />
+
+    <button onClick={decreaseCount}>Click Me To Decrease Count</button> <br />
+
+    <button onClick={reset}>Click Me To Reset Count</button>
+    </div>
+  );
+}
 export default App;
