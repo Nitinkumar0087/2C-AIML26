@@ -183,7 +183,7 @@ export default App;*/
 //Example:-8
 //Creating button
 
-import {useState} from 'react';
+/*import {useState} from 'react';
 
 function App(){
   const [count,setCount] = useState(0);
@@ -213,4 +213,29 @@ function App(){
     </div>
   );
 }
+export default App;*/
+
+//Example:-9
+//Taking name input and using event to change name
+
+import {useState} from 'react';
+
+function App(){
+  const [name,setName] = useState('');
+
+  function nameChange(event){
+    setName(event.target.value);
+  }
+
+  return(
+    <div>
+      <h2>Student Name</h2>
+      <input type="text" value={name} onChange={nameChange} placeholder='Enter Name'></input>
+      <h3>Student Name is {name}</h3>
+    </div>
+  );
+} 
 export default App;
+
+
+
