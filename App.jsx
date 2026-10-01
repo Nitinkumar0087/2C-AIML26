@@ -276,7 +276,7 @@ export default App;*/
 //Example:11
 //Creating form and submit button to display name and roll no
 
-import {useState} from 'react';
+/*import {useState} from 'react';
  function App(){
     const [name, setName] =useState('');
     const [rollNo, setrollNo] = useState('');
@@ -311,6 +311,34 @@ import {useState} from 'react';
   );
 }
 
+export default App;*/
+
+//Example:12
+//Array data ko list mai display karna
+
+function App() {
+  const students = [
+    { id: 1, name: 'Rahul ', attendance: 82 },
+    { id: 2, name: 'Vikas', attendance: 76 },
+    { id: 3, name: 'Mohit', attendance: 91 }
+  ];
+  const studentList = students.map(function (student) {
+    return (
+      <li key={student.id}>
+        {student.name} - {student.attendance}%
+      </li>
+    );
+  });
+
+  return (
+    <div>
+      <h1>Student Attendance List</h1>
+      <ul>
+        {studentList}
+      </ul>
+    </div>
+  );
+}
 export default App;
 
 
