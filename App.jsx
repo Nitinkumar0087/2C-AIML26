@@ -240,7 +240,7 @@ export default App;*/
 //Example:-10
 //Taking name and roll no as inputs, using event to change name and roll no
 
-import {useState} from 'react';
+/*import {useState} from 'react';
 function App() {
   const [name, setName] =useState('');
   function nameChange(event){
@@ -269,6 +269,46 @@ function App() {
     </div>
   );
 
+}
+
+export default App;*/
+
+//Example:11
+//Creating form and submit button to display name and roll no
+
+import {useState} from 'react';
+ function App(){
+    const [name, setName] =useState('');
+    const [rollNo, setrollNo] = useState('');
+
+  function nameChange(event){
+    setName(event.target.value);
+  }
+
+  function rollNoChange(event){
+    setrollNo(event.target.value);
+  }
+
+  function display(event){
+    event.preventDefault();
+
+    alert("Student Name:" + name + "\nRoll No:" + rollNo);
+  }
+
+  return(
+      <form onSubmit={display}>
+      <h2> Student Name</h2>
+      <input type ="text" value = {name} onChange={nameChange} placeholder='write your name here'></input>
+      <h3> Student name is: {name}</h3>
+
+
+      <h2>Student Roll No </h2>
+      <input type='text' value ={rollNo} onChange={rollNoChange} placeholder='Enter Roll No Here'></input>
+      <h3> Student subject is: {rollNo}</h3>
+
+      <button type="submit">Display</button>
+      </form>
+  );
 }
 
 export default App;
